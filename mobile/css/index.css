@@ -1,0 +1,88 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	line-height: 1.0em;
+	//line-height: 1.5em;
+}
+html, body
+{
+	width: 100%;
+	height: 100%;
+}
+body
+{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: Meiryo, sans-serif;
+	background-color: #333;
+}
+#viewport
+{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	//padding-top: 2em;
+	//margin-top: -2em;
+	//-webkit-overflow-scrolling: touch;
+	//background-color: red;
+}
+#components
+{
+	width: 400%;
+	height: 100%;
+	padding-bottom: 1.75em;
+	box-sizing: border-box;
+}
+#catalog_create, #list_catalog, #list_artist, #catalog_edit
+{
+	width: 25%;
+	float: left;
+	height: 100%;
+	//transition: margin-left 0.5s ease-out 0;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	background-color: #333;
+}
+
+
+#catalog_create { margin-left: 0%; }
+
+
+#link_catalog_create:target ~ #catalog_create { margin-left: 0%; }
+
+#link_list_catalog:target ~ #catalog_create { margin-left: -25%; }
+
+#link_list_artist:target ~ #catalog_create { margin-left: -50%; }
+#link_list_artist:target ~ #list_catalog { margin-left: -25%; }
+
+#link_catalog_edit:target ~ #catalog_create { margin-left: -75%; }
+#link_catalog_edit:target ~ #list_catalog { margin-left: -50%; }
+#link_catalog_edit:target ~ #list_artist { margin-left: -25%; }
+
+#navigator
+{
+	border-top: 2px solid #0D50DF;
+	border-bottom: 2px solid #0D50DF;
+	background-color: #3D80DF;
+	width: 100%;
+	//height: 1.75em;
+	text-align: center;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	position: absolute;
+	top: 100%;
+	margin-top: -1.75em;
+}
+
+#navigator a
+{
+	color: #fff;
+	padding: 0.25em 0.8em;
+	//font-size: 1.0em;
+	text-decoration: none;
+	display: inline-block;
+	//border: 1px solid red;
+}

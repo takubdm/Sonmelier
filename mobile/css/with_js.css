@@ -1,0 +1,23 @@
+#list_catalog,
+#list_artist
+{
+	overflow: hidden !important;
+}
+.thSAwrapper
+{
+	height: inherit;
+	overflow-y: scroll;
+}
+
+#catalog_create { margin-left: auto !important; }
+
+#link_catalog_create:target ~ #catalog_create { margin-left: auto !important; }
+
+#link_list_catalog:target ~ #catalog_create { margin-left: auto !important; }
+
+#link_list_artist:target ~ #catalog_create { margin-left: auto !important; }
+#link_list_artist:target ~ #list_catalog { margin-left: auto !important; }
+
+#link_catalog_edit:target ~ #catalog_create { margin-left: auto !important; }
+#link_catalog_edit:target ~ #list_catalog { margin-left: auto !important; }
+#link_catalog_edit:target ~ #list_artist { margin-left: auto !important; }

@@ -1,0 +1,35 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	line-height: 1.5em;
+	-webkit-appearance: none;
+}
+html, body
+{
+	width: 100%;
+	height: 100%;
+}
+body
+{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: Meiryo, sans-serif;
+	background-color: #333;
+}
+a
+{
+	text-decoration: none;
+	color: #000;
+}
+#components
+{
+	background-color: blue;
+	height: 100%;
+}
+#navigator
+{
+	background-color: red;
+	height: 30px;
+}

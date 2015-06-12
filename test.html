@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<title>test</title>
+		<style>
+		body
+		{
+			font-size: 24px;
+		}
+		a
+		{
+			color: orange;
+			text-decoration: none;
+			background-color: white;
+		}
+		.stars1
+		{
+			width: 3em;
+		}
+		.stars1 .star1, .stars1 .star2, .stars1 .star3
+		{
+			float: left;
+			margin-top: -1em;
+			opacity: 0;
+			cursor: pointer;
+			display: block;
+			position: relative;
+		}
+		.stars1 .star0
+		{
+			display: block;
+			cursor: pointer;
+			position: relative;
+		}
+		.stars1 .star1
+		{
+			opacity: 1;
+		}
+		.stars1 .star1:hover, .stars1 .star2:hover, .stars1 .star3:hover
+		{
+			opacity: 1;
+		}
+		ul
+		{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			float: left;
+			margin-top: -1em;
+			z-index: 10;
+			opacity: 0;
+		}
+		ul:hover
+		{
+			opacity: 1;
+		}
+		li
+		{
+		}
+		hr
+		{
+			clear: both;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="stars2">
+			<a class="star0" href="#0">★☆☆</a>
+		</div>
+		<ul class="stars1">
+			<li><a class="star0" href="#0">☆☆☆</a></li>
+			<li><a class="star3" href="#3">★★★</a></li>
+			<li><a class="star2" href="#2">★★</a></li>
+			<li><a class="star1" href="#1">★</a></li>
+		</ul>
+		<hr />
+		<div class="stars2">
+			<a class="star0" href="#0">★★☆</a>
+		</div>
+		<ul class="stars1">
+			<li><a class="star0" href="#0">☆☆☆</a></li>
+			<li><a class="star3" href="#3">★★★</a></li>
+			<li><a class="star2" href="#2">★★</a></li>
+			<li><a class="star1" href="#1">★</a></li>
+		</ul>
+		<hr />
+		<div class="stars2">
+			<a class="star0" href="#0">★★★</a>
+		</div>
+		<ul class="stars1">
+			<li><a class="star0" href="#0">☆☆☆</a></li>
+			<li><a class="star3" href="#3">★★★</a></li>
+			<li><a class="star2" href="#2">★★</a></li>
+			<li><a class="star1" href="#1">★</a></li>
+		</ul>
+		<hr />
+		<div>
+			This is a test. これはテストです。
+		</div>
+	</body>
+</html>

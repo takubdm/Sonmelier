@@ -1,0 +1,10 @@
+USE `music_list`;
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` TRIGGER `artist_and_list_ADEL` AFTER DELETE ON `artist_and_list`
+FOR EACH ROW BEGIN
+	declare is_orphaned int; # BE CAREFUL! 0 means true.
+	select count(*) into is_orphaned from `artist_and_list` where `ID_Artist`=OLD.`ID_Artist`;
+	if is_orphaned = 0 then
+		delete from `artist_info` where `ID`=OLD.`ID_Artist`;
+	end if;
+END
