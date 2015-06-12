@@ -58,8 +58,7 @@ tr.selected_artist .name a, tr.selected_artist .count
 	background-image: url('../link.png');
 	background-repeat: no-repeat;
 	background-size: 1.5em;
-	background-position-x: 0.5em;
-	background-position-y: 50%;
+	background-position: 0.5em;
 	padding-left: 2.5em;
 	text-decoration: none;
 }
