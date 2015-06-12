@@ -85,12 +85,12 @@
 	background-size: 10em;
 	display: block;
 	background-image: url('toggle.png');
-	background-position-x: -5em;
+	background-position: -5em 0;
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 #catalog_create input[name="shuffle"]:checked + label
 {
-	background-position-x: 0;
+    background-position: 0 0;
 }
 #catalog_create textarea
 {
