@@ -115,23 +115,31 @@
 }
 #catalog_edit input[type="submit"], #catalog_edit input[type="reset"]
 {
-	border: 2px solid #666;
-	background-color: #333;
-	color: #bbb;
-	padding: 10px;
-	font-size: 1em;
+    padding: 10px;
+    font-size: 1em;
+    /*
+    color: #bbb;
+    border: 2px solid #666;
+    background-color: #333;
 	background-size: 1.875em;
 	background-repeat: no-repeat;
 	background-position: 0.5em 5px;
-	padding-left: 2.8125em;
+    */
+    color: #aaa;
+    padding-left: 2.8125em;
+    background-image: -moz-linear-gradient(center top, #3E3E3E, #333);
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.06), 1px 1px 0px rgba(255, 255, 255, 0.03), -1px -1px 0px rgba(0, 0, 0, 0.02), 1px 1px 0px rgba(255, 255, 255, 0.05) inset;
+    border-radius: 2px;
+    border: 1px solid #141414;
 }
 #catalog_edit input[value="edit"]
 {
 	width: 65%;
-	background-image: url('checkbox_checked.png');
+	//background-image: url('checkbox_checked.png');
 }
 #catalog_edit input[value="remove"]
 {
 	width: 33%;
-	background-image: url('checkbox_checked.png');
+	//background-image: url('checkbox_checked.png');
 }
