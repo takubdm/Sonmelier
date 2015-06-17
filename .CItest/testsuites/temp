@@ -1,0 +1,39 @@
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr/td[2]/input</td>
+	<td>Create new catalog &lt;List name&gt;</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[2]/td[2]/input</td>
+	<td>Create new catalog with all values &lt;Title&gt;</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[3]/td[2]/input</td>
+	<td>https://www.google.co.jp/search?q=Create+new+catalog+with+all+values.&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr&amp;ei=8kqAVcnsE4aB8gWmmYDADQ</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[4]/td[2]/input</td>
+	<td>Create new catalog &lt;Category&gt;</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[5]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[6]/td[2]/textarea</td>
+	<td>Create<br />new<br />catalog<br />with<br />all<br />values.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[7]/td/input</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
