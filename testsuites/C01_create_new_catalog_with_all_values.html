@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://192.168.11.60/" />
+<title>C_create_new_list_with_all_values</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">C_create_new_list_with_all_values</td></tr>
+</thead><tbody>
+<!--Create new catalog with all values.-->
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr/td[2]/input</td>
+	<td>Create new catalog [List name]</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[2]/td[2]/input</td>
+	<td>Create new catalog with all values [Title]</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[3]/td[2]/input</td>
+	<td>https://www.google.co.jp/search?q=Create+new+catalog+with+all+values.&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr&amp;ei=8kqAVcnsE4aB8gWmmYDADQ</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/input</td>
+	<td>Create new catalog [Category]</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[5]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[6]/td[2]/textarea</td>
+	<td>Create<br />new<br />catalog<br />with<br />all<br />values.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[7]/td/input</td>
+	<td></td>
+</tr>
+<!--Verify form is disabled.-->
+<!--If ajax transaction finishes during the following verification, they will be failed.-->
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[2]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[3]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[5]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[6]/td[2]/textarea</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[7]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[7]/td/input[2]</td>
+	<td></td>
+</tr>
+<!--Verify catalog and category have created.-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_catalog']/div/dl/dt/span[contains(text(),'Create new catalog [Category]')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='list_catalog']/div/dl/dd/a[contains(text(),'Create new catalog [List name]')]</td>
+	<td></td>
+</tr>
+<!--Verify form is enabled.-->
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[2]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[3]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[5]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[6]/td[2]/textarea</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[7]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[7]/td/input[2]</td>
+	<td></td>
+</tr>
+<!--Verify form is resetted.-->
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[2]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[3]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/input</td>
+	<td>Sample Category</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/select</td>
+	<td>Sample Category</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/select/option[contains(text(),'Create new catalog [Category]')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotChecked</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[5]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[6]/td[2]/textarea</td>
+	<td></td>
+</tr>
+<!--Load created catalog.-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='list_catalog']/div/dl/dd/a[contains(text(),'Create new catalog [List name]')]</td>
+	<td></td>
+</tr>
+<!--Verify loaded catalog shows correct infos.-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_artist']/div/dl/dt/a[@href='https://www.google.co.jp/search?q=Create+new+catalog+with+all+values.&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr&amp;ei=8kqAVcnsE4aB8gWmmYDADQ'][contains(text(),'Create new catalog with all values [Title]')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='list_artist']/div/dl/dd/div/a[contains(text(),'Create')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='list_artist']/div/dl/dd/div/a[contains(text(),'new')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='list_artist']/div/dl/dd/div/a[contains(text(),'catalog')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='list_artist']/div/dl/dd/div/a[contains(text(),'with')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='list_artist']/div/dl/dd/div/a[contains(text(),'all')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='list_artist']/div/dl/dd/div/a[contains(text(),'values.')]</td>
+	<td></td>
+</tr>
+<!--Verify inputted values are shown in 'catalog_edit'.-->
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr/td[2]/input</td>
+	<td>Create new catalog [List name]</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[2]/td[2]/input</td>
+	<td>Create new catalog with all values [Title]</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[3]/td[2]/input</td>
+	<td>https://www.google.co.jp/search?q=Create+new+catalog+with+all+values.&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr&amp;ei=8kqAVcnsE4aB8gWmmYDADQ</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[4]/td[2]/input</td>
+	<td>Create new catalog [Category]</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[4]/td[2]/select</td>
+	<td>Create new catalog [Category]</td>
+</tr>
+<tr>
+	<td>verifyChecked</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[5]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[6]/td[2]/textarea</td>
+	<td>Create<br />new<br />catalog<br />with<br />all<br />values.</td>
+</tr>
+</tbody></table>
+</body>
+</html>

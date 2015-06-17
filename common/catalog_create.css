@@ -128,8 +128,16 @@
 }
 #catalog_create input[type="submit"]
 {
-	width: 65%;
-	//background-image: url('checkbox_checked.png');
+    width: 65%;
+    //background-image: url('checkbox_checked.png');
+}
+#catalog_create input[type="submit"]:disabled
+{
+    width: 65%;
+    background-image: url('../loading.gif'), -moz-linear-gradient(center top , rgb(62, 62, 62), rgb(51, 51, 51));
+    background-repeat: no-repeat, repeat;
+    background-position: 0.5em;
+    //background-image: url('checkbox_checked.png');
 }
 #catalog_create input[type="reset"]
 {

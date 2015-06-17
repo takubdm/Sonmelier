@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://192.168.11.60/" />
+<title>verify_enter_key_is_disabled</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">verify_enter_key_is_disabled</td></tr>
+</thead><tbody>
+<!--Set values and ENTER but nothing should happen.-->
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr/td[2]/input</td>
+	<td>Enter Key Disabled &lt;List name&gt;</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr/td[2]/input</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<!--Verify 'List name' is not empty before ENTER.-->
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[2]/td[2]/input</td>
+	<td>Enter Key Disabled &lt;Title&gt;</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr/td[2]/input</td>
+	<td>Enter Key Disabled &lt;List name&gt;</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr/td[2]/input</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[3]/td[2]/input</td>
+	<td>http://www.google.co.jp/#Enter Key Disabled &lt;Title&gt;</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr/td[2]/input</td>
+	<td>Enter Key Disabled &lt;List name&gt;</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr/td[2]/input</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[4]/td[2]/input</td>
+	<td>Enter Key Disabled &lt;Category&gt;</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr/td[2]/input</td>
+	<td>Enter Key Disabled &lt;List name&gt;</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr/td[2]/input</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+</tbody></table>
+</body>
+</html>

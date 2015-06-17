@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://192.168.11.60/" />
+<title>05a_verify_shuffle_is_working</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">05a_verify_shuffle_is_working</td></tr>
+</thead><tbody>
+<!--Create new list that shuffle is enabled.-->
+<tr>
+	<td>open</td>
+	<td>/Sonmelier/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=list_name</td>
+	<td>VerifyShuffleIsWorking</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=title</td>
+	<td>VerifyShuffleIsWorking</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=url</td>
+	<td>http://www.google.co.jp/</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=create_shuffle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=artists</td>
+	<td>1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<!--Load created list and get a 1st capture.-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_catalog']/div/dl/dd/a[contains(text(),'VerifyShuffleIsWorking')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='list_catalog']/div/dl/dd/a[contains(text(),'VerifyShuffleIsWorking')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_artist']/div/dl/dt/a[contains(text(),'VerifyShuffleIsWorking')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td>/root/デスクトップ/capture/05_bef.png</td>
+	<td></td>
+</tr>
+<!--Load created list and get a 2nd capture.-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_catalog']/div/dl/dd/a[contains(text(),'VerifyShuffleIsWorking')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='list_catalog']/div/dl/dd/a[contains(text(),'VerifyShuffleIsWorking')]</td>
+	<td></td>
+</tr>
+<!--!!!"updating" should be implemented?!!!-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_artist']/div/dl/dt/a[contains(text(),'VerifyShuffleIsWorking')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td>/root/デスクトップ/capture/05_aft.png</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

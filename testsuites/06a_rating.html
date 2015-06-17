@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://192.168.11.60/" />
+<title>06a_rating</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">06a_rating</td></tr>
+</thead><tbody>
+<!--Create list 'Rating'.-->
+<tr>
+	<td>open</td>
+	<td>/Sonmelier/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=list_name</td>
+	<td>Rating</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=title</td>
+	<td>Rating</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=url</td>
+	<td>http://www.google.co.jp/</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=artists</td>
+	<td>1 to 1<br />1 to 2<br />1 to 3<br />2 to 1<br />2 to 2<br />2 to 3<br />3 to 1<br />3 to 2<br />3 to 3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<!--Load created list.-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_catalog']/div/dl/dd/a[contains(text(),'Rating')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='list_catalog']/div/dl/dd/a[contains(text(),'Rating')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_artist']/div/dl/dt/a[contains(text(),'Rating')]</td>
+	<td></td>
+</tr>
+<!--Set preliminal rating.-->
+<!--1 to [123]-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[1][@value='★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[4][@value='★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[7][@value='★']</td>
+	<td></td>
+</tr>
+<!--2 to [123]-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[11]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[11][@value='★★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[14]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[14][@value='★★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[17]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[17][@value='★★']</td>
+	<td></td>
+</tr>
+<!--3 to [123]-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[21]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[21][@value='★★★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[24]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[24][@value='★★★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[27]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[27][@value='★★★']</td>
+	<td></td>
+</tr>
+<!--Exec rating.-->
+<tr>
+	<td>open</td>
+	<td>/Sonmelier/</td>
+	<td></td>
+</tr>
+<!--1 to [123]-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[1][@value='★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[5][@value='★★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[9]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[9][@value='★★★']</td>
+	<td></td>
+</tr>
+<!--2 to [123]-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[10]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[10][@value='★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[14]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[14][@value='★★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[18]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[18][@value='★★★']</td>
+	<td></td>
+</tr>
+<!--3 to [123]-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[19]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[19][@value='★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[23]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[23][@value='★★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='rating'])[27]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[27][@value='★★★']</td>
+	<td></td>
+</tr>
+<!--Reload and verify again.-->
+<tr>
+	<td>open</td>
+	<td>/Sonmelier/</td>
+	<td></td>
+</tr>
+<!--1 to [123]-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[1][@value='★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[5][@value='★★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[9][@value='★★★']</td>
+	<td></td>
+</tr>
+<!--2 to [123]-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[10][@value='★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[14][@value='★★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[18][@value='★★★']</td>
+	<td></td>
+</tr>
+<!--3 to [123]-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[19][@value='★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[23][@value='★★']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='rating'])[27][@value='★★★']</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

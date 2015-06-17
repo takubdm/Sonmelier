@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://192.168.11.60/" />
+<title>08_move_to_another_category</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">08_move_to_another_category</td></tr>
+</thead><tbody>
+<!--Create new catalog (First).-->
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr/td[2]/input</td>
+	<td>Move To Another Category (First)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[2]/td[2]/input</td>
+	<td>Move To Another Category (First)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[3]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/input</td>
+	<td>Current Category</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[5]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[6]/td[2]/textarea</td>
+	<td>Move To Another Category (First)</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[7]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_catalog']/div/dl/dd/a[contains(text(), 'Move To Another Category (First)')]</td>
+	<td></td>
+</tr>
+<!--Verify forms of 'create_catalog' have reset (First).-->
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[2]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[3]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/input</td>
+	<td>Sample Category</td>
+</tr>
+<tr>
+	<td>verifySelectedLabel</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/select</td>
+	<td>Sample Category</td>
+</tr>
+<tr>
+	<td>verifyNotChecked</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[5]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[6]/td[2]/textarea</td>
+	<td></td>
+</tr>
+<!--Create new catalog (Last).-->
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr/td[2]/input</td>
+	<td>Move To Another Category (Last)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[2]/td[2]/input</td>
+	<td>Move To Another Category (Last)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[3]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/input</td>
+	<td>Current Category</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[5]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[6]/td[2]/textarea</td>
+	<td>Move To Another Category (Last)</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[7]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_catalog']/div/dl/dd/a[contains(text(), 'Move To Another Category (Last)')]</td>
+	<td></td>
+</tr>
+<!--Verify forms of 'create_catalog' have reset (Last).-->
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[2]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[3]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/input</td>
+	<td>Sample Category</td>
+</tr>
+<tr>
+	<td>verifySelectedLabel</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/select</td>
+	<td>Sample Category</td>
+</tr>
+<tr>
+	<td>verifyNotChecked</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[5]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[6]/td[2]/textarea</td>
+	<td></td>
+</tr>
+<!--Load created catalog (First).-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='list_catalog']/div/dl/dd/a[contains(text(), 'Move To Another Category (First)')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr/td[2]/input</td>
+	<td>Move To Another Category (First)</td>
+</tr>
+<!--Change category by type (First).-->
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[4]/td[2]/input</td>
+	<td>Another Category</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[7]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_catalog']/div/dl/dt/span[contains(text(), 'Another Category')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='list_catalog']/div/dl/dt/span[contains(text(), 'Another Category')]</td>
+	<td></td>
+</tr>
+<!--Verify 'Another Category' has added in 'catalog_create'.-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr/td/select/option[@value='Another Category']</td>
+	<td></td>
+</tr>
+<!--Verify 'Another Category' has PERMANENTLY added in 'catalog_edit'.-->
+<tr>
+	<td>select</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr/td/select</td>
+	<td>label=Sample Category</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr/td/select/option[@value='Another Category']</td>
+	<td></td>
+</tr>
+<!--Load created catalog (Last).-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='list_catalog']/div/dl/dd/a[contains(text(), 'Move To Another Category (Last)')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr/td[2]/input</td>
+	<td>Move To Another Category (Last)</td>
+</tr>
+<!--Change category by select (Last).-->
+<tr>
+	<td>select</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[4]/td[2]/select</td>
+	<td>label=Another Category</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[7]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_catalog']/div/dl/dd/a[contains(text(), 'Move To Another Category (Last)')]</td>
+	<td></td>
+</tr>
+<!--Verify 'Current Category' has gone.-->
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//div[@id='list_catalog']/div/dl/dt/span[contains(text(), 'Current Category')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/select/option[@value='Current Category']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[4]/td[2]/select/option[@value='Current Category']</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

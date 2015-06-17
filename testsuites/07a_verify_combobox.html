@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://192.168.11.60/" />
+<title>07a_verify_combobox</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">07a_verify_combobox</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/Sonmelier/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td></td>
+	<td>javascript{$ = this.browserbot.getUserWindow().$;}</td>
+</tr>
+<!--Create list in new category.-->
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr/td[2]/input</td>
+	<td>VerifyCombobox</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[2]/td[2]/input</td>
+	<td>VerifyCombobox</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[@class='gen_category']/td[@class='input']/input</td>
+	<td>New Category</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[6]/td[2]/textarea</td>
+	<td>VerifyCombobox</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[7]/td/input</td>
+	<td></td>
+</tr>
+<!--Load created list.-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_catalog']/div/dl/dd[2]/a[contains(text(),'VerifyCombobox')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='list_catalog']/div/dl/dd[2]/a[contains(text(),'VerifyCombobox')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_artist']/div/dl/dt/span[contains(text(),'VerifyCombobox')]</td>
+	<td></td>
+</tr>
+<!--Verify 'New Category' has added in drop-down list.-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/select/option[@value=&quot;New Category&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[4]/td[2]/select/option[@value=&quot;New Category&quot;]</td>
+	<td></td>
+</tr>
+<!--Type temp category in 'create_list' and verify.-->
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/input</td>
+	<td>Temp Category Create</td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td></td>
+	<td>javascript{$(&quot;#catalog_create .thComboBox[name=category]&quot;).trigger('blur');}</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/select/option[@value=&quot;Temp Category Create&quot;][@selected=&quot;selected&quot;]</td>
+	<td></td>
+</tr>
+<!--(Verify the above commands is not affecting to 'edit_list').-->
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[4]/td[2]/select/option[@value=&quot;Temp Category Create&quot;]</td>
+	<td></td>
+</tr>
+<!--(Select default category and confirm typed category has gone).-->
+<tr>
+	<td>select</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/select</td>
+	<td>label=Sample Category</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/select/option[@value=&quot;Temp Category Create&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/select/option[@value=&quot;New Category&quot;]</td>
+	<td></td>
+</tr>
+<!--Type temp category in 'edit_list' and verify.-->
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[4]/td[2]/input</td>
+	<td>Temp Category Edit</td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td></td>
+	<td>javascript{$(&quot;#catalog_edit .thComboBox[name=category]&quot;).trigger('blur');}</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[4]/td[2]/select/option[@value=&quot;Temp Category Edit&quot;][@selected=&quot;selected&quot;]</td>
+	<td></td>
+</tr>
+<!--(Verify the above commands is not affecting to 'create_list').-->
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[4]/td[2]/select/option[@value=&quot;Temp Category Edit&quot;]</td>
+	<td></td>
+</tr>
+<!--(Select default category and confirm typed category has gone).-->
+<tr>
+	<td>select</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[4]/td[2]/select</td>
+	<td>label=Sample Category</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[4]/td[2]/select/option[@value=&quot;Temp Category Edit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[4]/td[2]/select/option[@value=&quot;New Category&quot;]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

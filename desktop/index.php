@@ -320,7 +320,7 @@
 				));
 				for (var i=0, l=inputs.length; i<l; i++)
 				{
-					$(inputs[i]).bind('keydown', function(e){
+					$(inputs[i]).bind('keypress', function(e){
 						if (e.keyCode == 13)
 						{
 							//Not implemented yet.
@@ -332,7 +332,6 @@
 								);
 							}
 							*/
-							//e.preventDefault();
 							return false;
 						}
 					});
@@ -388,6 +387,7 @@
 					}
 					*/
 					//
+                    form.find('input, select, textarea').attr('disabled', true);
 					var process = $(this).val();
 					form.submit(function()
 					{
@@ -415,6 +415,7 @@
 							{
 								alert(result.result);
 							}
+                            form.find('input, select, textarea').attr('disabled', false);
 							//location.hash = result;
 						});
 						form.unbind('submit');
@@ -658,7 +659,7 @@
 				flipsnap.moveToPoint(hash_point[location.hash]);
 				//$(window).trigger('popstate');
 
-				flipsnap.element.removeEventListener('mousedown');
+				//flipsnap.element.removeEventListener('mousedown', Flipsnap, false);
 
 				flipsnap.element.addEventListener('fstouchend', function(ev) {
 					location.hash = point_hash[ev.newPoint];

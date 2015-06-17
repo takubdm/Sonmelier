@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://192.168.11.60/" />
+<title>verify_artists_have_normalized</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">verify_artists_have_normalized</td></tr>
+</thead><tbody>
+<!--Create new catalog.-->
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr/td[2]/input</td>
+	<td>Verify artists have normalized.</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[2]/td[2]/input</td>
+	<td>Duplicated artists will be unique | 1byte/2bytes spaces or tabs before/after artists will be truncated | empty or lines with 1byte/2bytes spaces or tabs will be ignored</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[6]/td[2]/textarea</td>
+	<td><br />&nbsp;&nbsp;&nbsp;&nbsp;<br />Duplicated<br />&nbsp;&nbsp;&nbsp;&nbsp;some 1byte spaces before this line<br />some 1byte spaces after this line&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;some 1byte spaces before/after this line&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />Duplicated<br />&nbsp;&nbsp;&nbsp;some 2bytes spaces before this line<br />some 2bytes spaces after this line&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;some 2bytes spaces before/after this line&nbsp;&nbsp;&nbsp;<br /><br />		<br />Duplicated<br />		some tabs before this line<br />some tabs after this line		<br />		some tabs before/after this line		<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		<br />&nbsp;&nbsp;&nbsp;&nbsp;		some spaces and tabs before this line<br />some spaces and tabs after this line&nbsp;&nbsp;&nbsp;&nbsp;		<br />&nbsp;&nbsp;&nbsp;&nbsp;		some spaces and tabs before/after this line&nbsp;&nbsp;&nbsp;&nbsp;		<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;		Duplicated with spaces/tabs&nbsp;&nbsp;&nbsp;&nbsp;		<br /><br />Duplicated with spaces/tabs</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='catalog_create']/form/table/tbody/tr[7]/td/input</td>
+	<td></td>
+</tr>
+<!--Load created catalog.-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_catalog']/div/dl/dd/a[contains(text(), 'Verify artists have normalized.')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='list_catalog']/div/dl/dd/a[contains(text(), 'Verify artists have normalized.')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='list_artist']/div/dl/dt/span[contains(text(), 'Duplicated artists will be unique | 1byte/2bytes spaces or tabs before/after artists will be truncated | empty or lines with 1byte/2bytes spaces or tabs will be ignored')]</td>
+	<td></td>
+</tr>
+<!--Verify artists are normalized.-->
+<tr>
+	<td>assertValue</td>
+	<td>//div[@id='catalog_edit']/form/table/tbody/tr[6]/td[2]/textarea</td>
+	<td>Duplicated<br />some 1byte spaces before this line<br />some 1byte spaces after this line<br />some 1byte spaces before/after this line<br />some 2bytes spaces before this line<br />some 2bytes spaces after this line<br />some 2bytes spaces before/after this line<br />some tabs before this line<br />some tabs after this line<br />some tabs before/after this line<br />some spaces and tabs before this line<br />some spaces and tabs after this line<br />some spaces and tabs before/after this line<br />Duplicated with spaces/tabs</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//div[@id='list_artist']/div/dl/dd/div/a[contains(text(), '')]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
