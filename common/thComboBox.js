@@ -4,9 +4,9 @@ var thComboBox = new function thComboBox()
 	var NEW_VALUE = {
 		'dataset': {
 			'attr': 'data-new-value',
-			'value': 'new-value'
+			'value': 'true'
 		},
-		'selector': '[data-new-value=new-value]'
+		'selector': '[data-new-value=true]'
 	};
 	var tupple = [];
 

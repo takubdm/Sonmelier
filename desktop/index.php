@@ -341,17 +341,20 @@
 			{
 				form.find("input[type=reset]").bind('click', function(){
 					form.get(0).reset();
-					form.find("input.thComboBox").val(form.find("option:first").text());
-					form.find("select").val(form.find("option:first").val());
-					form.find("option[data-new-category=true]").remove();
-					return false;
+					//form.find("input.thComboBox").val(form.find("option:first").text());
+                    thComboBox.revertComboBox();
+                    form.find("option[data-new-value=true]").remove();
+                    form.find("select").val(form.find("option:first").val());
+                    thComboBox.defineComboBox();
+                    return false;
 				});
 			}
 			function refresh_category_list(_selects, _category_list)
 			{
 				//Change _target to array if it is not.
 				//if (!$.isArray(_selects)) _selects = [_selects];
-				_selects = $.makeArray(_selects);
+                thComboBox.revertComboBox();
+				//_selects = $.makeArray(_selects);
 
 				//Procedures for each select.
 				for (var i=0, l=_selects.length; i<l; i++)
@@ -371,8 +374,9 @@
 						}));
 					}
 					select.val(currentVal);
-					select.change();
 				}
+                thComboBox.defineComboBox();
+                _selects.trigger('change');
 			}
 			function append_form_event(form, submitButton, appUrl)
 			{
@@ -427,6 +431,7 @@
 				'catalog_create':
 				{
 					'create': function(catalog_info){
+                        refresh_category_list($("select"), catalog_info.category);
 						refresh_catalog_list($("#list_catalog>.thSAwrapper"), catalog_info);
 						showCurrentCatalogOnScreen(catalog_info.result);
 						$("#catalog_create>form").find("input[type=reset]").click();
