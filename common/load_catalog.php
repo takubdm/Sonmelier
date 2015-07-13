@@ -20,7 +20,7 @@
 		'password' => 'ventretky',
 		'db' => 'music_list',
 		'table' => 'view_list'
-	);;
+	);
 	//
 	$mysql['link'] = mysqli_connect($mysql['server'], $mysql['username'], $mysql['password']);
 	mysqli_select_db($mysql['link'], 'music_list');
